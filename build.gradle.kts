@@ -1,10 +1,11 @@
 plugins {
     id("java")
     id("org.jetbrains.intellij") version "1.5.2"
+    id("org.kordamp.gradle.markdown") version "2.2.0"
 }
 
 group = "io.github.frykher"
-version = "1.0"
+version = System.getenv().getOrDefault("VERSION", "")
 
 repositories {
     mavenCentral()
@@ -20,14 +21,36 @@ intellij {
 
 tasks {
     // Set the JVM compatibility versions
+
+    register<Copy>("copyREADME") {
+        from("$projectDir/README.md")
+        into("$projectDir/build/markdown")
+    }
+
+    markdownToHtml {
+        dependsOn("copyREADME")
+        sourceDir = File("$projectDir/build/markdown")
+        outputDir = File("$projectDir/build/html")
+    }
+
     withType<JavaCompile> {
         sourceCompatibility = "11"
         targetCompatibility = "11"
     }
 
     patchPluginXml {
+        dependsOn("markdownToHtml")
         sinceBuild.set("212")
         untilBuild.set("222.*")
+
+        pluginDescription.set(provider {
+            file("$projectDir/build/html/README.html").readText()
+        })
+
+        changeNotes.set(System.getenv().getOrDefault("CHANGE_NOTES", "None"))
+
+
+
     }
 
     signPlugin {
@@ -37,6 +60,6 @@ tasks {
     }
 
     publishPlugin {
-        token.set(System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken"))
+        token.set(System.getenv("PUBLISH_TOKEN"))
     }
 }

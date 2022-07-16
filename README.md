@@ -9,13 +9,17 @@ TODOS (a lot more than listed I just haven't found them yet):
 
 - Make border colors better
 - Incorporate Kanagawa's specific keyword palette with reds into the theme
+
 Any feedback is well appreciated :)
 
 To install plugin from disk:
 https://www.jetbrains.com/help/idea/managing-plugins.html
 
 Screenshots:
-![Sample Code Window](screenshots/Screenshot%202022-07-15%20215122.png)
-![Code Completion](screenshots/Screenshot%202022-07-15%20215614.png)
-![Search Everything Window](screenshots/Screenshot%202022-07-15%20215657.png)
+
+![Sample Code Window](https://github.com/frykher/jetbrains-kanagawa-theme/raw/master/screenshots/Screenshot%202022-07-15%20215122.png)
+
+![Code Completion](https://github.com/frykher/jetbrains-kanagawa-theme/raw/master/screenshots/Screenshot%202022-07-15%20215614.png)
+
+![Search Everything Window](https://github.com/frykher/jetbrains-kanagawa-theme/raw/master/screenshots/Screenshot%202022-07-15%20215657.png)
 

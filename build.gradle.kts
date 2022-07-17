@@ -36,8 +36,10 @@ tasks {
     }
 
     register("createChangeNotes") {
-        val mdChangeNotes = System.getenv().getOrDefault("CHANGE_NOTES", "None")
-        file("$markdownPath/CHANGE_NOTES.md").writeText(mdChangeNotes)
+        doLast {
+            val mdChangeNotes = System.getenv().getOrDefault("CHANGE_NOTES", "None")
+            file("$markdownPath/CHANGE_NOTES.md").writeText(mdChangeNotes)
+        }
     }
 
     markdownToHtml {

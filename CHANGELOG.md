@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 - Added CI/CD workflow
+- Added changelog and better description
 - Fully themed the console/terminal
 - Themed VCS file status colors
 - Changed cursor color and identifier highlight color

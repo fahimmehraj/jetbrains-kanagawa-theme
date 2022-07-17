@@ -6,8 +6,14 @@ plugins {
 
 group = "io.github.frykher"
 version = System.getenv().getOrDefault("VERSION", "")
-val markdownPath = "$projectDir/build/markdown"
-val htmlPath = "$projectDir/build/html"
+val markdownPath = File("$projectDir/build/markdown")
+if (!markdownPath.exists()) {
+    markdownPath.mkdirs()
+}
+val htmlPath = File("$projectDir/build/html")
+if (!htmlPath.exists()) {
+    htmlPath.mkdirs()
+}
 
 repositories {
     mavenCentral()
@@ -31,14 +37,14 @@ tasks {
 
     register("createChangeNotes") {
         val mdChangeNotes = System.getenv().getOrDefault("CHANGE_NOTES", "None")
-        File(markdownPath, "CHANGE_NOTES.md").writeText(mdChangeNotes)
+        file("$markdownPath/CHANGE_NOTES.md").writeText(mdChangeNotes)
     }
 
     markdownToHtml {
         dependsOn("copyREADME")
         dependsOn("createChangeNotes")
-        sourceDir = File(markdownPath)
-        outputDir = File(htmlPath)
+        sourceDir = markdownPath
+        outputDir = htmlPath
     }
 
     withType<JavaCompile> {

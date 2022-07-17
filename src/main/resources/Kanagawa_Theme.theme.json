@@ -87,7 +87,6 @@
       "ComboPopup.border": "1,1,1,1,2d3137"
     },
     "CompletionPopup":  {
-      "background": "waveBlue1",
       "selectionBackground": "waveBlue2",
       "matchForeground": "crystalBlue"
     },
@@ -110,15 +109,15 @@
     "DragAndDrop": {
       "areaForeground": "fujiWhite",
       "areaBackground": "sumilnk1",
-      "areaBorderColor": "sumilnk1"
+      "borderColor": "sumilnk1"
     },
     "Editor": {
       "background": "sumilnk1",
       "foreground": "fujiWhite",
       "SearchField": {
-        "background": "#00ff00"
+        "background": "sumilnk1"
       },
-      "shortcutForeground": "#ff0000"
+      "shortcutForeground": "waveAqua2"
     },
 
     "EditorPane.inactiveBackground": "sumilnk3",
@@ -141,12 +140,6 @@
     "Label": {
       "infoForeground": "fujiWhite",
       "successForeground": "waveAqua1"
-    },
-
-    "Lesson": {
-      "Tooltip.background" : "sumilnk3",
-      "Tooltip.spanBackground" : "waveAqua1",
-      "Tooltip.foreground" : "fujiWhite"
     },
 
     "Link": {

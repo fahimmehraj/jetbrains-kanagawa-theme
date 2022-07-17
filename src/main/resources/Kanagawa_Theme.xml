@@ -1,13 +1,15 @@
 <scheme name="Kanagawa Theme" version="142" parent_scheme="Darcula">
   <metaInfo>
     <property name="created">2022-07-15T20:13:27</property>
-    <property name="ide">Idea</property>
+    <property name="ide">idea</property>
     <property name="ideVersion">2021.2.0.0</property>
-    <property name="modified">2022-07-15T20:14:00</property>
+    <property name="modified">2022-07-17T19:07:43</property>
     <property name="originalScheme">_@user_Kanagawa Theme</property>
   </metaInfo>
   <colors>
+    <option name="CARET_COLOR" value="c8c093" />
     <option name="CARET_ROW_COLOR" value="2a2a37" />
+    <option name="CONSOLE_BACKGROUND_KEY" value="1f1f28" />
     <option name="DIFF_SEPARATORS_BACKGROUND" value="252535" />
     <option name="DOCUMENTATION_COLOR" value="223249" />
     <option name="DOC_COMMENT_LINK" value="7aa89f" />
@@ -20,9 +22,124 @@
     <option name="LOOKUP_COLOR" value="223249" />
     <option name="PROMOTION_PANE" value="223249" />
     <option name="SELECTION_BACKGROUND" value="223249" />
+    <option name="FILESTATUS_ADDED" value="76946a" />
+    <option name="FILESTATUS_COPIED" value="76946a" />
+    <option name="FILESTATUS_DELETED" value="C34043" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="C34043" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="717C7C" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_BOTH_CONFLICTS" value="E82424" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_CONFLICTS" value="E82424" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_PROPERTY_CONFLICTS" value="E82424" />
+    <option name="FILESTATUS_MERGED" value="957FB8" />
+    <option name="FILESTATUS_MODIFIED" value="DCA561" />
+    <option name="FILESTATUS_NOT_CHANGED_IMMEDIATE" value="DCA561" />
+    <option name="FILESTATUS_NOT_CHANGED_RECURSIVE" value="DCA561" />
+    <option name="FILESTATUS_RENAMED" value="DCA561" />
+    <option name="FILESTATUS_addedOutside" value="76946a" />
+    <option name="FILESTATUS_changelistConflict" value="ff6666" />
+    <option name="FILESTATUS_modifiedOutside" value="DCA561" />
+    <option name="FILESTATUS_UNKNOWN" value="658594" />
   </colors>
   <attributes>
     <option name="ANNOTATION_NAME_ATTRIBUTES" baseAttributes="DEFAULT_METADATA" />
+    <option name="CONSOLE_BLACK_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="90618" />
+      </value>
+    </option>
+    <option name="CONSOLE_BLUE_BRIGHT_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="7fb4ca" />
+      </value>
+    </option>
+    <option name="CONSOLE_BLUE_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="7e9cd8" />
+      </value>
+    </option>
+    <option name="CONSOLE_CYAN_BRIGHT_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="7aa89f" />
+      </value>
+    </option>
+    <option name="CONSOLE_CYAN_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="6a9589" />
+      </value>
+    </option>
+    <option name="CONSOLE_DARKGRAY_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="727169" />
+      </value>
+    </option>
+    <option name="CONSOLE_ERROR_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="e82424" />
+      </value>
+    </option>
+    <option name="CONSOLE_GRAY_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="c8c093" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="CONSOLE_GREEN_BRIGHT_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="98bb6c" />
+      </value>
+    </option>
+    <option name="CONSOLE_GREEN_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="76946a" />
+      </value>
+    </option>
+    <option name="CONSOLE_MAGENTA_BRIGHT_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="938aa9" />
+      </value>
+    </option>
+    <option name="CONSOLE_MAGENTA_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="957fb8" />
+      </value>
+    </option>
+    <option name="CONSOLE_NORMAL_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="dcd7ba" />
+      </value>
+    </option>
+    <option name="CONSOLE_RED_BRIGHT_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="ff4050" />
+      </value>
+    </option>
+    <option name="CONSOLE_RED_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="c34043" />
+      </value>
+    </option>
+    <option name="CONSOLE_SYSTEM_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="dcd7ba" />
+      </value>
+    </option>
+    <option name="CONSOLE_USER_INPUT">
+      <value>
+        <option name="FOREGROUND" value="7fb4ca" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="CONSOLE_WHITE_OUTPUT" baseAttributes="CONSOLE_NORMAL_OUTPUT" />
+    <option name="CONSOLE_YELLOW_BRIGHT_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="e6c384" />
+      </value>
+    </option>
+    <option name="CONSOLE_YELLOW_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="c0a36e" />
+      </value>
+    </option>
     <option name="CTRL_CLICKABLE">
       <value>
         <option name="FOREGROUND" value="7aa89f" />
@@ -227,7 +344,8 @@
     </option>
     <option name="IDENTIFIER_UNDER_CARET_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="52864e" />
+        <option name="BACKGROUND" value="2a2a37" />
+        <option name="EFFECT_COLOR" value="363646" />
       </value>
     </option>
     <option name="INACTIVE_HYPERLINK_ATTRIBUTES">
@@ -248,6 +366,31 @@
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
+    <option name="LOG_DEBUG_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="957fb8" />
+      </value>
+    </option>
+    <option name="LOG_ERROR_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="c34043" />
+      </value>
+    </option>
+    <option name="LOG_INFO_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="6a9589" />
+      </value>
+    </option>
+    <option name="LOG_VERBOSE_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="658594" />
+      </value>
+    </option>
+    <option name="LOG_WARNING_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="ff9e3b" />
+      </value>
+    </option>
     <option name="SEARCH_RESULT_ATTRIBUTES">
       <value>
         <option name="BACKGROUND" value="2c3d39" />
@@ -258,6 +401,12 @@
       <value>
         <option name="FOREGROUND" value="7fb4ca" />
         <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="TERMINAL_COMMAND_TO_RUN_USING_IDE">
+      <value>
+        <option name="BACKGROUND" value="573840" />
+        <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
     <option name="TEXT">
@@ -276,6 +425,12 @@
     <option name="TYPE_PARAMETER_NAME_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="7fb4ca" />
+      </value>
+    </option>
+    <option name="WARNING_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="ff9e3b" />
+        <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="WRITE_SEARCH_RESULT_ATTRIBUTES">

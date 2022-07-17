@@ -9,6 +9,7 @@ TODOS (a lot more than listed I just haven't found them yet):
 
 - Make border colors better
 - Incorporate Kanagawa's specific keyword palette with reds into the theme
+- Theme the terminal
 
 Any feedback is well appreciated :)
 

@@ -6,6 +6,8 @@ plugins {
 
 group = "io.github.frykher"
 version = System.getenv().getOrDefault("VERSION", "")
+val markdownPath = "$projectDir/build/markdown"
+val htmlPath = "$projectDir/build/html"
 
 repositories {
     mavenCentral()
@@ -24,13 +26,19 @@ tasks {
 
     register<Copy>("copyREADME") {
         from("$projectDir/README.md")
-        into("$projectDir/build/markdown")
+        into(markdownPath)
+    }
+
+    register("createChangeNotes") {
+        val mdChangeNotes = System.getenv().getOrDefault("CHANGE_NOTES", "None")
+        File(markdownPath, "CHANGE_NOTES.md").writeText(mdChangeNotes)
     }
 
     markdownToHtml {
         dependsOn("copyREADME")
-        sourceDir = File("$projectDir/build/markdown")
-        outputDir = File("$projectDir/build/html")
+        dependsOn("createChangeNotes")
+        sourceDir = File(markdownPath)
+        outputDir = File(htmlPath)
     }
 
     withType<JavaCompile> {
@@ -44,10 +52,12 @@ tasks {
         untilBuild.set("222.*")
 
         pluginDescription.set(provider {
-            file("$projectDir/build/html/README.html").readText()
+            file("$htmlPath/README.html").readText()
         })
 
-        changeNotes.set(System.getenv().getOrDefault("CHANGE_NOTES", "None"))
+        changeNotes.set(provider {
+            file("$htmlPath/CHANGE_NOTES.html").readText()
+        })
 
 
 

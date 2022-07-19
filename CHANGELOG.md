@@ -6,6 +6,7 @@
 - Fully themed the console/terminal
 - Themed VCS file status colors
 - Changed cursor color and identifier highlight color
+- Added plugin icon
 
 ## [1.0.0] - 2022-7-15
 - Initial release

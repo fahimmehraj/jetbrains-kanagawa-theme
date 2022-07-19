@@ -12,8 +12,7 @@ jobs:
       - name: Get version from tag
         id: tag_name
         run: |
-          if [$TAG]
-          then
+          if [ $TAG = true ]; then
             echo ::set-output name=current_version::${GITHUB_REF#refs/tags/v}
           else
             echo ::set-output name=current_version::Unreleased
@@ -48,7 +47,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/v')
         with:
-          tag: ${{ github.ref_name }}
+          tag_name: ${{ github.ref_name }}
           name: Kanagawa Theme ${{ steps.changelog_reader.outputs.version }}
           body: ${{ steps.changelog_reader.outputs.changes }}
           files: "*.zip"

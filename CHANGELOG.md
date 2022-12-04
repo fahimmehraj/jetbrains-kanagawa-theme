@@ -3,7 +3,7 @@
 ## [Unreleased]
 
 ## [1.1.1] - 2022-12-3
-- Bumped IDE version to 2022.1
+- Added IDE version 2022.3
 
 ## [1.1.0] - 2022-7-18
 - Added CI/CD workflow

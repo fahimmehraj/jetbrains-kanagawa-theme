@@ -21,7 +21,7 @@ repositories {
 
 // Configure Gradle IntelliJ Plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin
 intellij {
-    version.set("2022.2")
+    version.set("2021.2")
     type.set("IC") // Target IDE Platform
 
     plugins.set(listOf(/* Plugin Dependencies */))
@@ -56,8 +56,8 @@ tasks {
 
     patchPluginXml {
         dependsOn("markdownToHtml")
-        sinceBuild.set("222")
-        untilBuild.set("222.*")
+        sinceBuild.set("212")
+        untilBuild.set("223.*")
 
         pluginDescription.set(provider {
             file("$htmlPath/README.html").readText()

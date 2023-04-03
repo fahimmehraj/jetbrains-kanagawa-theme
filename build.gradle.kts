@@ -1,6 +1,6 @@
 plugins {
     id("java")
-    id("org.jetbrains.intellij") version "1.10.0"
+    id("org.jetbrains.intellij") version "1.13.3"
     id("org.kordamp.gradle.markdown") version "2.2.0"
 }
 
@@ -21,7 +21,7 @@ repositories {
 
 // Configure Gradle IntelliJ Plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin
 intellij {
-    version.set("2021.2")
+    version.set("2023.1")
     type.set("IC") // Target IDE Platform
 
     plugins.set(listOf(/* Plugin Dependencies */))
@@ -50,14 +50,14 @@ tasks {
     }
 
     withType<JavaCompile> {
-        sourceCompatibility = "11"
-        targetCompatibility = "11"
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
     }
 
     patchPluginXml {
         dependsOn("markdownToHtml")
         sinceBuild.set("212")
-        untilBuild.set("223.*")
+        untilBuild.set("231.*")
 
         pluginDescription.set(provider {
             file("$htmlPath/README.html").readText()

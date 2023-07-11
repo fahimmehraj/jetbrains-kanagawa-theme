@@ -57,7 +57,7 @@ tasks {
     patchPluginXml {
         dependsOn("markdownToHtml")
         sinceBuild.set("212")
-        untilBuild.set("231.*")
+        untilBuild.set("232.*")
 
         pluginDescription.set(provider {
             file("$htmlPath/README.html").readText()
@@ -66,8 +66,6 @@ tasks {
         changeNotes.set(provider {
             file("$htmlPath/CHANGE_NOTES.html").readText()
         })
-
-
 
     }
 

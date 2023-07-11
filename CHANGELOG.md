@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.1.3] - 2023-07-08
+- Added IDE version 2023.2
+
 ## [1.1.2] - 2023-04-1
 - Added IDE version 2023.1
 

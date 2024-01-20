@@ -1,3 +1,6 @@
+// See https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api/-project/find-property.html
+fun properties(key: String) = project.findProperty(key).toString()
+
 plugins {
     id("java")
     id("org.jetbrains.intellij") version "1.13.3"
@@ -5,6 +8,7 @@ plugins {
 }
 
 group = "io.github.frykher"
+// Perhaps `version = properties("pluginVersion")`.
 version = System.getenv().getOrDefault("VERSION", "")
 val markdownPath = File("$projectDir/build/markdown")
 if (!markdownPath.exists()) {
@@ -21,7 +25,9 @@ repositories {
 
 // Configure Gradle IntelliJ Plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin
 intellij {
-    version.set("2023.1")
+    // See https://github.com/catppuccin/jetbrains/blob/27949117de78e8f33f1d5bbeaec975ac9a7c15fe/build.gradle.kts
+    // for this rationale
+    version.set(properties("platformVersion"))
     type.set("IC") // Target IDE Platform
 
     plugins.set(listOf(/* Plugin Dependencies */))
@@ -56,8 +62,12 @@ tasks {
 
     patchPluginXml {
         dependsOn("markdownToHtml")
-        sinceBuild.set("212")
-        untilBuild.set("233.*")
+
+        // See https://github.com/catppuccin/jetbrains/blob/27949117de78e8f33f1d5bbeaec975ac9a7c15fe/build.gradle.kts
+        // for this rationale
+        version.set(properties("pluginVersion"))
+        sinceBuild.set(properties("pluginSinceBuild"))
+        untilBuild.set(properties("pluginUntilBuild"))
 
         pluginDescription.set(provider {
             file("$htmlPath/README.html").readText()

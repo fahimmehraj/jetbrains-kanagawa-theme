@@ -8,7 +8,6 @@ plugins {
 }
 
 group = "io.github.frykher"
-// Perhaps `version = properties("pluginVersion")`.
 version = System.getenv().getOrDefault("VERSION", "")
 val markdownPath = File("$projectDir/build/markdown")
 if (!markdownPath.exists()) {

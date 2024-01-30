@@ -8,6 +8,7 @@ plugins {
 }
 
 group = "io.github.frykher"
+// Version is set by CI, GitHub Actions
 version = System.getenv().getOrDefault("VERSION", "")
 val markdownPath = File("$projectDir/build/markdown")
 if (!markdownPath.exists()) {
@@ -64,7 +65,6 @@ tasks {
 
         // See https://github.com/catppuccin/jetbrains/blob/27949117de78e8f33f1d5bbeaec975ac9a7c15fe/build.gradle.kts
         // for this rationale
-        version.set(properties("pluginVersion"))
         sinceBuild.set(properties("pluginSinceBuild"))
         untilBuild.set(properties("pluginUntilBuild"))
 

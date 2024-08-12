@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [1.1.6] - 2024-08-11
+- Added IDE version 2024.2
+- Updated IntelliJ platform plugin to version 2
+
 ## [1.1.5] - 2024-04-14
 - Added IDE version 2024.1
 
@@ -27,7 +31,8 @@
 ## [1.0.0] - 2022-7-15
 - Initial release
 
-[Unreleased]: https://github.com/frykher/jetbrains-kanagawa-theme/compare/v1.1.5...HEAD
+[Unreleased]: https://github.com/frykher/jetbrains-kanagawa-theme/compare/v1.1.6...HEAD
+[1.1.6]: https://github.com/frykher/jetbrains-kanagawa-theme/releases/tag/v1.1.6
 [1.1.5]: https://github.com/frykher/jetbrains-kanagawa-theme/releases/tag/v1.1.5
 [1.1.4]: https://github.com/frykher/jetbrains-kanagawa-theme/releases/tag/v1.1.4
 [1.1.3]: https://github.com/frykher/jetbrains-kanagawa-theme/releases/tag/v1.1.3

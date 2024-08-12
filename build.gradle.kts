@@ -1,9 +1,18 @@
 // See https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api/-project/find-property.html
 fun properties(key: String) = project.findProperty(key).toString()
 
+buildscript {
+    configurations.all {
+        resolutionStrategy.dependencySubstitution {
+            substitute(module("com.overzealous:remark:1.1.0")).using(module("com.wavefront:remark:2023-07.07"))
+                .because("not available on maven central anymore")
+        }
+    }
+}
+
 plugins {
     id("java")
-    id("org.jetbrains.intellij") version "1.13.3"
+    id("org.jetbrains.intellij.platform") version "2.0.0"
     id("org.kordamp.gradle.markdown") version "2.2.0"
 }
 
@@ -21,18 +30,24 @@ if (!htmlPath.exists()) {
 
 repositories {
     mavenCentral()
+
+    intellijPlatform {
+        defaultRepositories()
+    }
+}
+
+dependencies {
+    intellijPlatform {
+        create("IC", properties("platformVersion"))
+        bundledPlugin("com.intellij.java")
+
+        pluginVerifier()
+        zipSigner()
+        instrumentationTools()
+    }
 }
 
 // Configure Gradle IntelliJ Plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin
-intellij {
-    // See https://github.com/catppuccin/jetbrains/blob/27949117de78e8f33f1d5bbeaec975ac9a7c15fe/build.gradle.kts
-    // for this rationale
-    version.set(properties("platformVersion"))
-    type.set("IC") // Target IDE Platform
-
-    plugins.set(listOf(/* Plugin Dependencies */))
-}
-
 tasks {
     // Set the JVM compatibility versions
 

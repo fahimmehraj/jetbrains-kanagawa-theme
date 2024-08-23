@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.2.0] - 2024-08-23
+- Vastly improved contrast between text and background elements
+
 ## [1.1.6] - 2024-08-11
 - Added IDE version 2024.2
 - Updated IntelliJ platform plugin to version 2
@@ -31,7 +34,8 @@
 ## [1.0.0] - 2022-7-15
 - Initial release
 
-[Unreleased]: https://github.com/frykher/jetbrains-kanagawa-theme/compare/v1.1.6...HEAD
+[Unreleased]: https://github.com/frykher/jetbrains-kanagawa-theme/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/frykher/jetbrains-kanagawa-theme/releases/tag/v1.2.0
 [1.1.6]: https://github.com/frykher/jetbrains-kanagawa-theme/releases/tag/v1.1.6
 [1.1.5]: https://github.com/frykher/jetbrains-kanagawa-theme/releases/tag/v1.1.5
 [1.1.4]: https://github.com/frykher/jetbrains-kanagawa-theme/releases/tag/v1.1.4

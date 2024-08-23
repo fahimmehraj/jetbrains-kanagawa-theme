@@ -75,11 +75,9 @@
       "shadowColor": "sumilnk3",
       "focusedBorderColor": "waveAqua1",
       "default": {
-        "foreground": "fujiWhite",
-        "startBackground": "waveAqua1",
-        "endBackground": "waveAqua1",
-        "startBorderColor": "waveAqua1",
-        "endBorderColor": "waveAqua1",
+        "foreground": "sumilnk1",
+        "startBackground": "crystalBlue",
+        "endBackground": "crystalBlue",
         "focusedBorderColor": "waveAqua1",
         "focusColor": "waveAqua1"
       },
@@ -201,10 +199,10 @@
         "installForeground": "fujiWhite",
         "installBorderColor":"springViolet2",
         "installFillForeground": "#ffffff",
-        "installFillBackground": "waveAqua2",
-        "updateForeground":"#ffffff",
-        "updateBackground": "waveAqua2",
-        "updateBorderColor": "waveAqua2"
+        "installFillBackground": "crystalBlue",
+        "updateForeground":"fujiWhite",
+        "updateBackground": "crystalBlue",
+        "updateBorderColor": "crystalBlue"
       },
 
       "SearchField": {
@@ -244,8 +242,8 @@
       }
     },
     "SearchMatch": {
-      "startBackground": "waveBlue1",
-      "endBackground": "waveBlue1"
+      "startBackground": "crystalBlue",
+      "endBackground": "crystalBlue"
     },
     "SpeedSearch": {
       "foreground": "fujiWhite",
@@ -263,7 +261,7 @@
     "Table": {
       "background": "sumilnk1",
       "stripeColor": "#000000",
-      "selectionForeground": "waveAqua1",
+      "selectionForeground": "sumilnk1",
       "foreground": "fujiWhite",
       "dropLineColor": "fujiWhite",
       "focusCellForeground": "fujiWhite",

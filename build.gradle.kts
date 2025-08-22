@@ -12,7 +12,7 @@ buildscript {
 
 plugins {
     id("java")
-    id("org.jetbrains.intellij.platform") version "2.0.0"
+    id("org.jetbrains.intellij.platform") version "2.7.2"
     id("org.kordamp.gradle.markdown") version "2.2.0"
 }
 
@@ -43,7 +43,6 @@ dependencies {
 
         pluginVerifier()
         zipSigner()
-        instrumentationTools()
     }
 }
 

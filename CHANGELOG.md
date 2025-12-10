@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.2.4] - 2025-11-14
+- Remove upper untilBuild bound to support future IDE releases
+
 ## [1.2.3] - 2025-08-22
 - Added IDE version 2025.2
 
